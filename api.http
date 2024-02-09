@@ -1,0 +1,26 @@
+### Create Polls
+POST http://localhost:3333/polls
+Content-Type: application/json
+
+{
+  "title": "Qual melhor framework Node.JS?",
+  "options": [
+    "Express",
+    "Adonis",
+    "NestJS",
+    "Koa",
+    "Fastify"
+  ]
+}
+
+### Get Poll by Id
+GET http://localhost:3333/polls/6001209e-c0d2-4c51-bc6d-f9dfe902f999
+Content-Type: application/json
+
+### Vote by PoolId in OptionId
+POST http://localhost:3333/polls/6001209e-c0d2-4c51-bc6d-f9dfe902f999/votes
+Content-Type: application/json
+
+{
+  "pollOptionId": "92eb9c92-fa64-411d-ae0f-8c7c5f92e3bd"
+}
